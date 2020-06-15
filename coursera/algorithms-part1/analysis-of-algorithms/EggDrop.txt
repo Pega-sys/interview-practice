@@ -39,3 +39,9 @@ The remaining sqrt(N) tests will be enough to check each floor between floor t-1
 and t. The floor that breaks will be the value of T.
 
 Version 4
+We drop the egg at floor 1, 3(1+2), 6(1+2+3), 10(1+2+3+4), and so on
+Note that 1+2+3+4+…k = k(k+1)/2 ~ 1/2*(k^2). Now that T=1/2*(k^2), k=sqrt(2T).
+From k(k−1)/2 to k(k+1)/2, we toss egg one by one, then we toss 1/2*(k^2)
+times.
+In total, we toss 2*sqrt(2T)
+times, thus c=2*sqrt(2)
